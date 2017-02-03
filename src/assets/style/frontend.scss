@@ -1,0 +1,27 @@
+body {
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
+.content {
+  display: flex;
+  width: 1200px;
+}
+
+input {
+  &:focus,
+  &:active,
+  &:visited {
+    border: 1px solid #42b983;
+    outline: none;
+  }
+}
+
+// font-icon
+
+// .icon {
+//   width: 1em; height: 1em;
+//   vertical-align: -0.15em;
+//   fill: currentColor;
+//   overflow: hidden;
+// }

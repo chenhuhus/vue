@@ -1,0 +1,9 @@
+$screen-mobile: 991px;
+$screen-desktop: 992px;
+
+@mixin text($size: 1rem, $height: 1.5em, $color: #4c4c4c, $weight: 300 ) {
+  color: $color;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+}
