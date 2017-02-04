@@ -5,7 +5,7 @@
       <nickname></nickname>
     </div>
 
-    <ul class="side-links">
+    <ul class="side-links" v-on:click="SideBarToggle">
       <li>
         <router-link to="/">
           <span>首页</span>
@@ -28,6 +28,11 @@
     components: {
       Avatar,
       Nickname
+    },
+    methods: {
+      SideBarToggle: function () {
+        this.$emit('SideBarToggle')
+      }
     }
   }
 </script>

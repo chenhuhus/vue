@@ -1,7 +1,7 @@
 <template>
   <div class="top-header">
     <div class="content">
-      <a href="javascript:;" class="header-menu" v-on:click="SideBarShow">
+      <a href="javascript:;" class="header-menu" v-on:click="SideBarToggle">
         <i></i>
         <i></i>
         <i></i>
@@ -10,7 +10,7 @@
     </div>
     
     <transition name="slide-left">
-      <side-bar v-if="isSideBarShow"></side-bar>
+      <side-bar v-if="isSideBarShow" v-on:SideBarToggle="SideBarToggle"></side-bar>
     </transition>
     
     <transition name="shade">
@@ -35,9 +35,10 @@
       SideBar
     },
     methods: {
-      SideBarShow: function () {
+      SideBarToggle: function () {
         this.isSideBarShow = !this.isSideBarShow
         this.isShadeShow = !this.isShadeShow
+        console.log('111')
       },
       ShadeToggle: function () {
         this.isShadeShow = !this.isShadeShow
